@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrayPilot Privacy Policy</title>
+<meta name="description" content="Privacy policy for TrayPilot, a local Windows 11 system-tray utility. No account, no telemetry, no cloud service.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nikatsam.github.io/app-privacy-policies/traypilot.html">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #555555;
+    --accent: #0f6fa8;
+    --border: #e2e2e2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10161c;
+      --fg: #e9edf1;
+      --muted: #a7b0b8;
+      --accent: #6fc3ff;
+      --border: #2a333b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+  .back { font-size: 0.85rem; }
+  h1 {
+    font-size: 1.9rem;
+    margin-bottom: 4px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 36px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+  }
+  code {
+    background: rgba(127,127,127,0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.92em;
+  }
+  a { color: var(--accent); }
+  ul { padding-left: 22px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="back"><a href="index.html">&larr; All app privacy policies</a></p>
+  <h1>TrayPilot Privacy Policy</h1>
+  <p class="meta">Last updated: September 26, 2026</p>
+
+  <p>
+    TrayPilot is a local Windows utility. It does not require an account and
+    does not send personal data, telemetry, audio, microphone recordings,
+    screen captures, packet contents, or user documents to a server. The app
+    reads local display, audio, network-adapter, and Windows settings needed
+    to provide its controls. Settings and diagnostic logs are stored locally
+    under <code>%LOCALAPPDATA%\TrayPilot</code>. Users can remove this data
+    by deleting that folder.
+  </p>
+
+  <h2>What TrayPilot accesses on your device</h2>
+  <ul>
+    <li>Connected monitor information (name, brightness, refresh rate, HDR capability/state) — read and adjusted locally via DDC/CI or Windows display APIs.</li>
+    <li>Audio endpoints (playback devices, microphone) — used to switch devices and toggle mute, via local Windows audio APIs.</li>
+    <li>Local network adapter statistics (aggregate download/upload throughput) — read locally to display activity; TrayPilot does not inspect packet contents.</li>
+    <li>Windows settings such as theme, Night Light, power mode, desktop icon visibility, and lock/session actions — read and changed locally via Windows APIs.</li>
+    <li>A configurable keyboard shortcut you set, stored locally to open the app's flyout.</li>
+  </ul>
+
+  <h2>What TrayPilot does not do</h2>
+  <ul>
+    <li>No account or sign-in of any kind.</li>
+    <li>No cloud service, backend server, or remote sync.</li>
+    <li>No telemetry or analytics collection.</li>
+    <li>No microphone recording or audio capture.</li>
+    <li>No screen capture.</li>
+    <li>No inspection of network packet contents.</li>
+    <li>No advertising or third-party tracking SDKs.</li>
+  </ul>
+
+  <h2>Data storage and retention</h2>
+  <p>
+    TrayPilot stores your configured settings (such as your keyboard shortcut)
+    and local diagnostic logs entirely on your own device, under
+    <code>%LOCALAPPDATA%\TrayPilot</code>. This data never leaves your device
+    and is not accessible to the developer. Diagnostic logs may include
+    application error details but do not contain passwords, credentials, or
+    the contents of your files.
+  </p>
+
+  <h2>How to delete your data</h2>
+  <p>
+    Uninstalling TrayPilot removes the application. To remove all locally
+    stored settings and logs, delete the folder
+    <code>%LOCALAPPDATA%\TrayPilot</code> after uninstalling.
+  </p>
+
+  <h2>Why TrayPilot requests broad system permissions</h2>
+  <p>
+    TrayPilot declares the Windows <code>runFullTrust</code> capability
+    because it needs low-level access to display hardware (DDC/CI monitor
+    controls), Windows Management Instrumentation (for laptop panel
+    brightness), audio endpoint COM interfaces, and network adapter
+    statistics — none of which are exposed through sandboxed app APIs. This
+    capability does not cause TrayPilot to transmit any data off your
+    device; it only affects which local Windows APIs the app is permitted
+    to call.
+  </p>
+
+  <h2>Children's privacy</h2>
+  <p>
+    TrayPilot is a general-purpose system utility with no user accounts,
+    social features, or user-generated content, and it is not directed at
+    children. It does not knowingly collect personal information from
+    anyone, including children.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    If TrayPilot's data practices change in a future release, this page will
+    be updated and the "Last updated" date above will change accordingly.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    For privacy questions or support requests, see the
+    <a href="https://github.com/nikatsam/WIN_APP_TrayPilot">TrayPilot GitHub repository</a>
+    or open an issue there.
+  </p>
+
+  <footer>
+    TrayPilot &middot; <a href="https://github.com/nikatsam/WIN_APP_TrayPilot">Source</a>
+    &middot; <a href="index.html">All app privacy policies</a>
+  </footer>
+</main>
+</body>
+</html>
